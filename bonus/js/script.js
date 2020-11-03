@@ -23,6 +23,16 @@ $(document).ready(function () {
             classeActive.removeClass('active').next('img').addClass('active');
         }
 
+        // selezione per cerchio
+        var classeCerchioActive = $('.nav > i.active');
+        
+        if (classeCerchioActive.hasClass('last')) {
+            $('i.first').addClass('active');
+            classeCerchioActive.removeClass('active');
+        } else {
+            classeCerchioActive.removeClass('active').next('i').addClass('active');
+        }
+
     });
 
     // selezione e funzione pulsante indietro
@@ -41,3 +51,29 @@ $(document).ready(function () {
     });
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Bonus:
+// i pallini si evidenziano in accordo alla img corrispondente
+// Clicchiamo sui pallini e mostriamo l’immagine corrispondente
+// altro esempio: Generiamo i pallini con JS (ma quello che volete liberamente)
+// Consiglio del giorno:
+// Come sempre è importante usare la documentazione di jQuery per scoprire/rinfrescare memoria sulle funzioni che potrebbero esserci utili.
+// Anche perchè qui come gestire eventi da tastiera dovrò vedermelo li.
+// Come vi ho consigliato,  potete partire dal layout base visto in classe,
+// vi allego lo zip di partenza.
+// Come ulteriore bonus potreste provare altre soluzioni/strutture.
+// Come sempre facciamo la richiesta base e solo quello nella cartella principale del repo
+// i bonus vanno in sottocartella/e.
