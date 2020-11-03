@@ -23,7 +23,7 @@ $(document).ready(function () {
             classeActive.removeClass('active').next('img').addClass('active');
         }
 
-        // selezione per cerchio
+        // selezione per cerchio next
         var classeCerchioActive = $('.nav > i.active');
         
         if (classeCerchioActive.hasClass('last')) {
@@ -48,6 +48,17 @@ $(document).ready(function () {
         } else {
             imgPrev.removeClass('active').prev('img').addClass('active');
         }
+
+        // selezione per cerchio prev
+        var classeCerchioActive = $('.nav > i.active');
+        
+        if (classeCerchioActive.hasClass('first')) {
+            $('i.last').addClass('active');
+            classeCerchioActive.removeClass('active');
+        } else {
+            classeCerchioActive.removeClass('active').prev('i').addClass('active');
+        }
+
     });
 
 });
